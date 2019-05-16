@@ -24,7 +24,7 @@ const App = () => {
       <p>
         { count2 }
       </p>
-      <button onClick={onClick2s}>Click Me!</button>
+      <button onClick={onClick2}>Click Me!</button>
     </div>
   )
 }
