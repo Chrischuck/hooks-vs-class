@@ -6,18 +6,23 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      counter: 1
+      count: 0
     }
+
+    this.onClick = this.onClick.bind(this)
   }
 
-  onClick = () => {
-    this.setState((prevState) => ({ counter: prevState.counter + 1 }))
+
+  onClick() {
+    this.setState((prevState) => ({ count: prevState.count + 1 }))
   }
 
   render() {
     return (
-      <div>
-        { this.state.counter }
+      <div style={{marginLeft: '20px'}}>
+        <p>
+          { this.state.count }
+        </p>
         <button onClick={this.onClick}>Click Me!</button>
       </div>
     )
