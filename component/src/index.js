@@ -12,6 +12,13 @@ class App extends React.Component {
     this.onClick = this.onClick.bind(this)
   }
 
+  componentDidMount() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+
+  componentDidUpdate() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
 
   onClick() {
     this.setState((prevState) => ({ count: prevState.count + 1 }))
